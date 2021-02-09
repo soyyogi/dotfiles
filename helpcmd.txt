@@ -1,0 +1,19 @@
+###### lampp commands for setup
+# copy files from lamppconfig to dir path
+sudo systemctl status httpd
+sudo systemctl start httpd
+sudo systemctl restart httpd
+### setup mariadb after install
+sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+sudo systemctl status mysqld
+sudo systemctl start mysqld
+sudo mysql_secure_installation
+### login database as root user
+sudo mysql -u root -p
+exit
+### change write permission to server dir
+sudo chmod -R a+rwx /srv
+
+
+
+######
