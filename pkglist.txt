@@ -51,3 +51,4 @@ php-apache
 mariadb
 libmariadbclient
 mariadb-clients
+phpmyadmin

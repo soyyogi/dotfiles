@@ -13,7 +13,12 @@ sudo mysql -u root -p
 exit
 ### change write permission to server dir
 sudo chmod -R a+rwx /srv
-
+### setup phpmyadmin
+sudo mkdir /usr/share/webapps/phpMyAdmin/tmp
+sudo chmod -R a+rwx /usr/share/webapps/phpMyAdmin/tmp
+# config sudo nano /usr/share/webapps/phpMyAdmin/config.inc.php
+# config sudo nano /etc/httpd/conf/extra/phpmyadmin.conf
+# config sudo nano /etc/httpd/conf/httpd.conf
 
 
 ######
