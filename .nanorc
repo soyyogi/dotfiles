@@ -19,7 +19,7 @@
 ## Automatically indent a newly created line to the same number of
 ## tabs and/or spaces as the preceding line -- or as the next line
 ## if the preceding line is the beginning of a paragraph.
-# set autoindent
+set autoindent
 
 ## Back up files to the current filename plus a tilde.
 # set backup
@@ -42,7 +42,7 @@
 # set breaklonglines
 
 ## Do case-sensitive searches by default.
-# set casesensitive
+set casesensitive
 
 ## Constantly display the cursor position in the status bar.  Note that
 ## this overrides "quickblank".
@@ -60,7 +60,7 @@
 # set fill -8
 
 ## Remember the used search/replace strings for the next session.
-# set historylog
+set historylog
 
 ## Display a "scrollbar" on the righthand side of the edit window.
 # set indicator
@@ -107,7 +107,7 @@ set mouse
 # set noconvert
 
 ## Don't display the helpful shortcut lists at the bottom of the screen.
-# set nohelp
+set nohelp
 
 ## Don't automatically add a newline when a file does not end with one.
 # set nonewlines
@@ -183,10 +183,10 @@ set nowrap
 ## (The old form of this option, 'set suspend', is deprecated.)
 
 ## Use this tab size instead of the default; it must be greater than 0.
-# set tabsize 8
+set tabsize 10
 
 ## Convert typed tabs to spaces.
-# set tabstospaces
+set tabstospaces
 
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
 # set trimblanks
@@ -214,16 +214,16 @@ set nowrap
 
 ## Paint the interface elements of nano.  These are examples;
 ## by default there are no colors, except for errorcolor.
-# set titlecolor bold,lightwhite,blue
-# set promptcolor lightwhite,lightblack
-# set statuscolor bold,lightwhite,green
-# set errorcolor bold,lightwhite,red
-# set selectedcolor lightwhite,magenta
-# set stripecolor ,yellow
-# set scrollercolor cyan
-# set numbercolor cyan
-# set keycolor cyan
-# set functioncolor green
+set titlecolor bold,black,lightmagenta
+set promptcolor lightwhite,lightblack
+set statuscolor bold,lightwhite,green
+set errorcolor bold,lightwhite,red
+set selectedcolor lightwhite,magenta
+set stripecolor ,yellow
+set scrollercolor cyan
+set numbercolor bold,lightmagenta
+set keycolor cyan
+set functioncolor green
 
 ## In root's .nanorc you might want to use:
 # set titlecolor bold,lightwhite,magenta
@@ -240,6 +240,10 @@ set nowrap
 
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
+
+## To configure a color for comments in any file that is opened with nano
+# syntax "comments" ".*"
+# color blue "^#.*"
 
 ## To include most of the existing syntax definitions, you can do:
 include "/usr/share/nano/*.nanorc"
@@ -307,8 +311,3 @@ bind ^T gotoline main
 bind ^Z undo main
 bind ^Y redo main
 set multibuffer
-
-
-## To configure a color for comments in any file that is opened with nano
-syntax "comments" ".*"
-color blue "^#.*"
