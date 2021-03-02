@@ -197,6 +197,7 @@ assign [class="Pcmanfm"] $ws1
 assign [class="Code"] $ws3
 assign [class="Google-chrome"] $ws2
 assign [class="Teams"] $ws7
+assign [class="Zoom"] $ws7
 assign [class="vlc"] $ws4
 for_window [class="Spotify"] move to workspace $ws8
 
